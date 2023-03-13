@@ -1,0 +1,1054 @@
+@import url(./utilities.css);
+
+
+/* Fonts */
+
+@font-face {
+    font-family: "Raleway-regular";
+    src: url(../fonts/Raleway-Regular.ttf);
+}
+@font-face {
+    font-family: "Raleway-medium";
+    src: url(../fonts/Raleway-Medium.ttf);
+}
+@font-face {
+    font-family: "Raleway-bold";
+    src: url(../fonts/Raleway-Bold.ttf);
+}
+@font-face {
+    font-family: "Raleway-semibold";
+    src: url(../fonts/Raleway-SemiBold.ttf);
+}
+@font-face {
+    font-family: "Raleway-black";
+    src: url(../fonts/Raleway-Black.ttf);
+}
+@font-face {
+    font-family: "Raleway-extrabold";
+    src: url(../fonts/Raleway-ExtraBold.ttf);
+}
+
+/* Colors */
+
+:root {
+    --primary: #EEBF00;
+    --dark: #473a50;
+    --olive-yellow: #e2c274;
+    --light: #f1f1f1;
+    --sienna: #f9bb9d;
+    --pure: #fff;
+    --ternary: #797979;
+    --danger: #903965;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* overflow-x: hidden; */
+}
+/* html {
+    overflow: hidden;
+} */
+/* html {
+    overflow: auto; 
+} */
+/* html {
+    overflow: scroll; 
+} */
+.main-wrapper {
+    overflow: hidden;
+}
+body {
+    -webkit-font-smoothing: antialiaced;
+    font-family: 'Raleway', sans-serif;
+}
+.container {
+    width: 100%;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+@media (min-width: 576px) {
+    .container {
+        width: 540px;
+    }
+}
+@media (min-width: 768px) {
+    .container {
+        width: 720px;
+    }
+}
+@media (min-width: 992px) {
+    .container {
+        width: 960px;
+    }
+}
+@media (min-width: 1200px) {
+    .container {
+        width: 1152px;
+    }
+}
+
+.main-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.nav-background {
+    width: 100%;
+    height: 100%;
+    background-color: var(--light);
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 0;
+    z-index: 1;
+}
+
+.nav-trigger {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    padding: 24px;
+    display: none;
+}
+
+.nav-trigger .image {
+    width: 40px;  
+    height: 40px;
+    transition: all .3s;
+    background-color: var(--sienna);
+    padding: 0.5rem;
+    border-radius: 6px;
+    transform: rotate(180deg);
+}
+.nav-trigger .image.scaled {
+    transform: rotate(0deg);
+}
+.site-content-wrapper {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: var(--pure);
+    z-index: 2;
+    transition: all .3s ease-in-out;
+}
+.site-content-wrapper.scaled {
+    transform: scale(0.9) translateX(90%) translateY(6%);
+    border-radius: 4px;
+    box-shadow: 0 3px 10px 0 var(--ternary);
+}
+.site-content {
+    width: 100%;
+    height: 100%;
+    overflow-x: auto;
+}
+
+header.topbar {
+    background-color: var(--dark);
+    color: var(--pure);
+    font-family: 'Raleway-SemiBold';
+    padding: 0.7rem 0;
+}
+header.topbar .auth a {
+    text-decoration: none;
+    color: var(--pure);
+}
+ header.topbar .auth a:hover {
+    color: var(--sienna);
+    transition: all .3s ease-in;
+}
+
+header.topbar .icons a{
+    margin-right: 0.6rem;
+}
+header.topbar .auth .divider{
+    padding: 0 1rem;
+}
+header.topbar .auth img{
+    margin-right: 0.35rem;
+}
+
+nav .top {
+    padding: 1.5rem 0;
+}
+nav .top .contact h5, nav .top .time h5 {
+    font-family: 'Raleway-Black';
+    margin-bottom: 0.25rem;
+}
+nav .top .contact h6, nav .top .time h6 {
+    font-family: 'Raleway-Medium';
+    letter-spacing: 0.055rem;
+    font-size: 0.75rem;
+    color: var(--ternary);
+}
+nav .top .contact img, nav .top .time img {
+    margin-right: 1rem;
+}
+
+
+.navbar a {
+    color: var(--dark);
+    text-decoration: none;
+    font-family: 'Raleway-SemiBold';
+    font-size: 1rem;
+    padding: 1rem 1.5rem;
+}
+.navbar a.active {
+    background-color: var(--olive-yellow);
+    color: var(--pure);
+}
+.navbar a:hover {
+    background-color: var(--olive-yellow);
+    color: var(--pure);
+    transition: all .3s ease-in-out;
+}
+
+.hero {
+    height: 600px;
+    background-image: url(../images/hero.png);
+    background-position: 0% 0%;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+.hero .container {
+    position: relative;
+}
+.hero h1 {
+    font-family: "Raleway-Extrabold";
+    font-size: 2.5rem;
+    margin-bottom: 0.8rem;
+}
+.hero h1 span {
+    font-family: "Raleway-bold";
+    color: var(--primary);
+}
+.hero p {
+    font-family: 'Raleway-Medium';
+    width: 50%;
+    margin-bottom: 0.5rem;
+    line-height: 1.4rem;
+    overflow: hidden;
+}
+
+.hero button:first-child {
+    margin-right: 0.5rem;
+}
+.hero .hero-image img {
+    position: absolute;
+    right: 0;
+    top: -40px;
+}
+
+.top-products {
+    background-color: var(--light);
+    padding: 6rem 0;
+}
+
+hr{
+    border: 1px solid var(--light);
+    opacity: 0.9;
+    margin: 1rem 0;
+}
+.top-products .slider {
+    position: relative;
+}
+
+.slick-track {
+    padding: 1rem 0;
+}
+.top-products .slider-btn {
+    width: 30px;
+    height: 30px;
+    border: none;
+    border-radius: 4px;
+    background-color: var(--primary);
+    cursor: pointer;
+    outline: none;
+}
+.top-products .prev-btn {
+    position: absolute;
+    top: 46%;
+    left: -4rem;
+    z-index: 1;
+}
+.top-products .next-btn {
+    position: absolute;
+    top: 46%;
+    right: -3rem;
+    z-index: 1;
+}
+.top-products .food-slider .food-card {
+    background-color: var(--pure);
+    padding: 1rem;
+    margin-right: 2rem;
+    border-radius: 16px;
+}
+.top-products .food-card .product-image img {
+    width: 80%;
+    height: 200px;
+    object-fit: contain;
+}
+.top-products .food-card .stars {
+    gap: 8px;
+    margin: 0.5rem 0;
+}
+.top-products .food-card .stars img {
+    width: 18px;
+    height: 18px;
+}
+.top-products .food-card .pricing {
+    color: var(--danger); 
+    padding: 0.5rem 0;
+    font-family: 'Raleway-Bold';
+}
+.top-products .food-card button {
+    display: flex;
+    margin: 0.8rem 0;
+    align-items: center;
+    color: var(--dark);
+    font-family: 'raleway-bold';
+    font-weight: 400;
+    font-size: 1rem;
+    background-color: var(--pure);
+    border: 2px solid var(--olive-yellow);
+    border-radius: 4px;
+    width: 50%;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+    text-align: center;
+}
+.top-products .food-card button span {
+    margin: 0 auto;
+}
+.top-products .food-card button:hover {
+    background-color: var(--olive-yellow);
+    color: var(--pure);
+}
+.top-products .food-card button img {
+    height: 32px;
+    background-color: var(--olive-yellow);
+    padding: 0.5rem;
+}
+
+.top-products button.view-more {
+    margin-top: 2rem;
+    padding: 1rem;
+}
+.top-products button.view-more:hover {
+    background-color: var(--light);
+}
+
+
+.about-meal {
+    padding: 4rem 0;
+}
+.about-meal img {
+    width: 85%;
+}
+.about-meal h2 {
+    color: var(--dark);
+    margin-bottom: 2rem;
+    font-size: 1.4rem;
+    line-height: 1.3;
+}
+.about-meal p {
+    margin-bottom: 2rem;
+    line-height: 1.7;
+}
+
+.services {
+    background-color: var(--light);
+    padding: 3rem 0;
+    z-index: 0;
+    position: relative;
+}
+.services .card-wrapper {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    width: 65%;
+    margin: 2rem auto;
+    margin-top: 10rem;
+}
+.services .card {
+    width: 90%;
+    background-color: var(--dark);
+    padding: 3rem;
+    text-align: center;
+    border-radius: 8px;
+    margin: 0 auto;
+    position: relative;
+}
+.services .card img {
+    position: absolute;
+    width: 8rem;
+    top: -65px;
+    transform: translateX(-50%);
+}
+.services .card h2 {
+    font-size: 1.5rem;
+    color: var(--primary);
+    margin: 2rem 0;
+}
+.services .card p {
+    line-height: 1.5;
+    margin-bottom: 3rem;
+    color: var(--pure);
+}
+.services .card hr {
+    margin-top: 2rem;
+    color: var(--light);
+}
+.services .card button {
+    margin-bottom: 1rem;
+    color: var(--pure);
+}
+.services .card button:hover {
+    background-color: var(--dark);
+    color: var(--primary);
+}
+
+.services .magic-shadow-sm::after {
+    bottom: -30px;
+}
+
+
+
+.big-deal {
+    padding: 4rem 0;
+    background: linear-gradient( to top, rgba(65, 77, 95, 0.9), rgba(27, 39, 59, 0.9)), url(../images/food-table.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.big-deal .section-heading {
+    color: var(--pure);
+}
+.big-deal .card-wrapper {
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+.big-deal .card {
+    border-radius: 6px;
+    width: 20%;
+    padding: 1rem;
+    font-size: 2rem;
+    color: var(--pure);
+    background-color: var(--sienna);
+}
+.big-deal .card-wrapper .card div:first-child {
+    font-size: 3rem;
+    margin-bottom: 0.2rem;
+    font-family: 'Raleway-ExtraBold';
+}
+
+
+.blog {
+    padding: 4rem 0;
+    background-color: var(--light);
+    position: relative;
+    z-index: 0;
+}
+.blog .card-wrapper {
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+.blog .card-wrapper .card img {
+    width: 100%;
+}
+.blog .card-wrapper .card {
+    width: 50%;
+    background-color: var(--pure);
+    border-radius: 4px;
+}
+.blog .card .content {
+    padding: 1.5rem;
+}
+.blog .card h2 {
+    padding: 1rem 0;
+}
+.blog .card p {
+    line-height: 1.5;
+    color: var(--ternary);
+}
+.blog .card .post-meta {
+    margin-bottom: 1rem;
+}
+.blog .card .details span {
+    margin-right: 0.5rem;
+}
+.blog button {
+    margin-top: 3rem;
+}
+
+
+.subscribe {
+    padding: 4rem 0;
+    background-color: var(--primary);
+    position: relative;
+}
+.subscribe .content {
+    width: 50%;
+}
+.subscribe img {
+    width: 80%;
+    display: flex;
+    flex: 1;
+}
+.subscribe p {
+    margin: 1.8rem 0;
+    line-height: 1.5;
+}
+.subscribe .input-wrap {
+    padding: 0.4rem 0.8rem;
+    border-radius: 4px;
+    background-color: var(--pure);
+}
+.subscribe .input-wrap input {
+    border: none;
+    width: 100%;
+    font-size: 1.2rem;
+    color: var(--ternary);
+    outline: none;
+}
+.subscribe .input-wrap button {
+    padding: 0.6rem 1rem;
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    border: 2px solid var(--primary);
+    background-color: var(--primary);
+    color: var(--pure);
+    font-family: 'Raleway-Bold';
+}
+.subscribe .input-wrap button:hover {
+    border: 2px solid var(--primary);
+    background-color: var(--pure);
+    color: var(--ternary);
+    transition: all .3s ease-in-out;
+}
+
+
+
+.contact-us .contact-us-info {
+    margin: 0 auto;
+    margin-top: 3rem;
+}
+.contact-us .contact-us-info h1 {
+    font-size: 30px;
+}
+.contact-us .contact-us-info .card {
+    padding: 1rem;
+}
+.contact-us .contact-us-info .card h2 {
+    color: var(--dark);
+}
+.contact-us .contact-us-info .card img {
+    margin-right: 1rem;
+    width: 60px;
+}
+
+.google-maps {
+    width: 1000px;
+    height: 500px;
+}
+.google-maps iframe {
+    width: 100%;
+}
+
+
+footer {
+    padding: 4rem 0;
+    background-color: var(--dark);
+}
+footer .container .box {
+    width: 24%;
+    color: var(--pure);
+}
+footer hr {
+    border: 2px solid var(--primary);
+    opacity: 0.7;
+}
+footer .box p {
+    margin: 2rem 0;
+}
+footer .box button:hover {
+    background-color: var(--dark);
+}
+footer .box ul li a {
+    color:var(--pure);
+    text-decoration: none;
+    transition: all .3s ease;
+}
+footer .box ul li a:hover {
+    color:var(--primary);
+}
+footer .box ul {
+    list-style-type: none;
+}
+footer .box ul li {
+    margin-bottom: 0.5rem;
+}
+footer .box ul li a {
+    text-decoration: none;
+    color: var(--pure);
+}
+footer .socials img {
+    margin-right: 2rem;
+}
+
+footer .instagram-api .post-wrap {
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 0.4rem;
+}
+footer .instagram-api img {
+    width: 5rem;
+    height: 50px;
+}
+footer .copyright {
+    margin-top: 4rem;
+    color: var(--pure);
+}
+footer .copyright a {
+    text-decoration: none;
+    color: var(--primary);
+}
+
+
+/* Media Queries -----------------------------------------------------------------------------------------------------------------------------------*/
+
+
+
+
+
+
+@media (max-width: 992px) {
+    
+    .nav-trigger {
+        display: block;
+    }
+    header,  .navbar {
+        display: none;
+    }
+    nav {
+        margin-top: 1rem;
+    }
+    nav .branding {
+        margin: 0 auto;
+    }
+    nav .contact, nav .time {
+        display: none;
+    }
+
+    .nav-background {
+        font-size: 1rem;
+        padding: 2rem;
+    }
+    .nav-top .contact {
+        margin: 2rem 0;
+    }
+    .nav-top .contact h5, .nav-top .time h5 {
+        font-family: 'Raleway-Black';
+        margin-bottom: 0.25rem;
+        font-size: 0.8rem;
+    }
+    .nav-top .contact h6, .nav-top .time h6 {
+        font-family: 'Raleway-Medium';
+        letter-spacing: 0.1rem;
+        font-size: 0.7rem;
+        color: var(--ternary);
+    }
+    .nav-top .contact img, .nav-top .time img {
+        margin-right: 1rem;
+    }
+
+    .nav-background .mini-cart {
+        margin: 2rem 0;
+    }
+    .nav-background .mini-cart:hover {
+        margin: 2rem 0;
+    }
+    .nav-background .mini-cart img {
+        margin-right: 0.7rem;
+        width: 18px;
+    }
+
+    .nav-background .cart a {
+        color: var(--ternary);
+        transition: all .3s ease-in-out;
+    }
+    .nav-background .cart a:hover {
+        color: var(--olive-yellow);
+    }
+    .nav-background .nav-top ul li {
+        list-style: none;
+        margin-bottom: 1.2rem;
+    }
+    .nav-background .nav-top ul li a {
+        text-decoration: none;
+    }
+
+
+    .hero .container {
+        margin: 0 auto;
+        width: 95%;
+    }
+    .big-deal .card {
+        font-size: 20px;
+    }
+    .services .card {
+        padding: 1rem;
+        width: 98%;
+    }
+    
+    .blog .card .content {
+        padding: 1rem;
+    }
+    .blog .card h2 {
+        padding: 1rem 0;
+    }
+    .blog .card .post-meta {
+        margin-bottom: 1rem;
+    }
+    .blog .card .date {
+        margin-right: 3rem;
+    }
+
+    .subscribe .container .content {
+        width: 100% !important;
+    }
+
+    footer .box p {
+        line-height: 1.5;
+    }
+
+}
+
+
+
+@media (max-width: 1200px) {
+    .hero h1 {
+        width: 50%;
+    }
+    .top-products .food-card button {
+        width: 70%;
+    }
+    .top-products .food-card.magic-shadow-sm:after {
+        bottom: -22px;
+    }
+    .services .card {
+        width: 95%;
+    }
+    .services .card-wrapper {
+        width: 90%;
+    }
+    .services .card.magic-shadow-sm:after {
+        bottom: -23px;
+    }
+    .services .card p {
+        margin-bottom: 2rem;
+    }
+    .services .card hr {
+        margin-top: 4rem;
+    }
+    footer .instagram-api .post-wrap {
+        margin: 0 auto;
+        grid-template-columns: repeat(2, 1fr);
+        /* grid-gap: 0.4rem; */
+    }
+
+    .google-maps {
+        overflow-x: hidden;
+        width: 50%;
+        height: 50%;
+    }
+}
+@media (min-width: 1200px) {
+    .google-maps {
+        overflow-x: hidden;
+        width: 50%;
+        height: 50%;
+    }
+}
+
+
+
+@media (max-width: 1075px) {
+    .top-products .slider {
+        width: 90%;
+        margin: 0 auto;
+    }
+    .top-products .prev-btn {
+        left: -3rem;
+    }
+    .top-products .next-btn {
+        right: -2rem;
+    }
+}
+
+@media (max-width: 768px) {
+
+
+    .hero .container {
+        margin: 0 auto;
+        width: 95%;
+    }
+    .hero .hero-image img {
+        width: 350px;
+        top: 20px;
+    }
+    .about-meal .container {
+        margin: 0;
+        width: 100%;
+    }
+    .about-meal img {
+        width: 100%;
+    }
+    .about-meal h2 {
+        margin-bottom: 0.4rem;
+    }
+    .about-meal p {
+        margin-bottom: 1rem;
+        line-height: 1.4;
+    }
+    .top-products .prev-btn {
+        display: none !important;
+    }
+    .top-products .next-btn {
+        display: none !important;
+    }
+    .blog .card-wrapper {
+        flex-direction: column;
+    }
+    .blog .card {
+        width: 100% !important;
+    }
+
+    .subscribe .container {
+        display: block;
+    }
+    .subscribe .container img {
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+    .subscribe .container .content {
+        width: 100% !important;
+    }
+
+    .contact-us-info {
+        margin-top: 1rem !important;
+    }
+    .contact-us-info .section-heading {
+        margin-bottom: 2rem;
+    }
+    .contact-us .contact-us-info .card {
+        margin-top: 0.5rem;
+    }
+
+    footer hr {
+        border: 1px solid var(--primary);
+        opacity: 0.7;
+    }
+    footer .box p {
+        margin-top: 0;
+        margin-bottom: 1rem;
+    }
+    footer .box button {
+        padding: 0.6rem;
+    }
+    footer .instagram-api .post-wrap {
+        margin: 0 auto;
+        grid-template-columns: repeat(2, 1fr);
+        /* grid-gap: 0.4rem; */
+    }
+    footer .box ul li {
+        margin-bottom: 1rem;
+    }
+}
+
+@media (max-width: 690px) {
+    .hero .container {
+        width: 80%;
+        margin: 0 auto !important;
+    }
+    .hero .container h1 {
+        width: 100% !important;
+    }
+    .hero .hero-image img{
+        display: none !important;
+    }
+
+
+    .about-meal .about-meal-wrap {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 1rem;
+    }
+
+
+    .services .card-wrapper {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 6rem;
+    }
+
+
+    .subscribe .container .content {
+        width: 90% !important;
+        margin: 0 auto;
+    }
+
+    .contact-us .content {
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+    }
+    .google-maps {
+        margin-top: 2rem;
+        overflow-x: hidden;
+        width: 100%;
+        height: 100%;
+    }
+    .contact-us-info {
+        margin-top: 1rem !important;
+    }
+    .contact-us-info .section-heading {
+        margin-bottom: 2rem;
+    }
+    .contact-us .contact-us-info .card {
+        margin-top: 0.5rem;
+    }
+    .contact-us .contact-us-info .card h2 {
+        font-size: 20px;
+    }
+    .contact-us .contact-us-info .card img {
+        width: 50px;
+    }
+
+    footer .container {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    footer .container .box {
+        width: 90%;
+        margin-bottom: 2rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .big-deal .card-wrapper {
+        display: grid;
+        width: 90%;
+        margin: 0 auto;
+        grid-template-columns: repeat(2,1fr);
+    }
+    .big-deal .card {
+        width: 100%;
+    }
+    .blog .card .post-meta  {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 1rem;
+    }
+    .blog .card .post-meta .details {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 0.5rem;
+    }
+}
+@media (max-width: 460px) {
+    .site-content-wrapper.scaled {
+        transform: scale(0.9) translateX(85%) translateY(6%);
+        border-radius: 4px;
+        box-shadow: 0 3px 10px 0 var(--ternary);
+    }
+}
+@media (max-width: 410px) {
+    .top {
+        display: none;
+    }
+    .hero {
+        margin-top: 2rem;
+    }
+    .hero .container p {
+        width: 100% !important; 
+        margin: 1rem 0;
+    }
+    footer .instagram-api .post-wrap {
+        margin: 0 auto;
+        grid-template-columns: repeat(1, 1fr);
+        /* grid-gap: 0.4rem; */
+    }
+    .subscribe .input-wrap button {
+        padding: 0.6rem 0.5rem;
+    }
+}
+
+
+
+@media (max-width: 385px) {
+    .hero .container {
+        width: 100%;
+        margin: 0 auto;
+    }
+    .hero .welcome {
+        margin: 2rem 0;
+    }
+    .subscribe .input-wrap button {
+        padding: 0.4rem 0.3rem;
+    }
+    .subscribe .content input {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 381px) {
+    .hero .container .btn {
+        margin-bottom: 1rem;
+    }
+}
+
+
+
+
+@media (max-width: 345px) {
+    .subscribe .content input {
+        font-size: 14px;
+    }
+
+    .contact-us .card span {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 320px) {
+    .top-products {
+        padding: 1rem 0;
+    }
+    .about-meal {
+        padding: 1rem 0;
+    }
+    .services {
+        padding: 1rem 0;
+    }
+    footer .container {
+        width: 100%;
+        margin: 0 auto;
+        grid-template-columns: repeat(1, 1fr);
+    }
+    footer .instagram-api .post-wrap {
+        margin: 0 auto;
+        grid-template-columns: repeat(2, 1fr);
+        /* grid-gap: 0.4rem; */
+    }
+}

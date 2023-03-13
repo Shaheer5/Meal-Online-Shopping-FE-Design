@@ -1,0 +1,104 @@
+.flex {
+    display: flex;
+}
+.justify-between {
+    justify-content: space-between;
+}
+.items-center {
+    align-items: center;
+}
+.justify-center {
+    justify-content: center;
+}
+.justify-around {
+    justify-content: space-around;
+}
+.flex-1 {
+    flex: 1;
+}
+
+.magic-shadow {
+    position: relative;
+    background-color: var(--pure);
+}
+.magic-shadow:after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 69px;
+    background-image: url(../icons/shadow.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    bottom: -20px;
+    position: absolute;
+    z-index: -1;
+}
+.magic-shadow-sm {
+    position: relative;
+    background-color: var(--pure);
+}
+.magic-shadow-sm:after {
+    content: '';
+    display: block;
+    width: 90%;
+    height: 69px;
+    background-image: url(../icons/shadow-sm.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    bottom: -24px;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    z-index: -1;
+}
+
+.btn {
+    padding: 1rem;
+    border-radius: 4px;
+    border: none;
+    font-weight: 600;
+    line-height: 0.8rem;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+.btn-primary {
+    border: 2px solid var(--olive-yellow);
+    background-color: var(--olive-yellow);
+    color: var(--pure);
+}
+.btn-primary:hover {
+    background-color: var(--pure);
+    color: var(--olive-yellow);
+    transition: all .3s ease-in-out;
+}
+.btn-secondary {
+    border: 2px solid var(--sienna);
+    color: var(--pure);
+    background-color: var(--sienna);
+}
+.btn-secondary:hover {
+    background-color: var(--pure);
+    color: var(--sienna);
+    transition: all .3s ease-in-out;
+}
+
+.section-heading {
+    text-align: center;
+    color: var(--dark);
+    position: relative;
+    margin-bottom: 6rem;
+}
+.section-heading::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 30px;
+    background-image: url(../icons/hr.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+}
+
+.text-center {
+    text-align: center;
+}
