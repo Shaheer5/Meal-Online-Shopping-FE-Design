@@ -1,34 +1,9 @@
 @import url(./utilities.css);
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 
-/* Fonts */
 
-@font-face {
-    font-family: "Raleway-regular";
-    src: url(../fonts/Raleway-Regular.ttf);
-}
-@font-face {
-    font-family: "Raleway-medium";
-    src: url(../fonts/Raleway-Medium.ttf);
-}
-@font-face {
-    font-family: "Raleway-bold";
-    src: url(../fonts/Raleway-Bold.ttf);
-}
-@font-face {
-    font-family: "Raleway-semibold";
-    src: url(../fonts/Raleway-SemiBold.ttf);
-}
-@font-face {
-    font-family: "Raleway-black";
-    src: url(../fonts/Raleway-Black.ttf);
-}
-@font-face {
-    font-family: "Raleway-extrabold";
-    src: url(../fonts/Raleway-ExtraBold.ttf);
-}
-
-/* Colors */
+/* Fonts & Colors */
 
 :root {
     --primary: #EEBF00;
@@ -39,6 +14,13 @@
     --pure: #fff;
     --ternary: #797979;
     --danger: #903965;
+
+    --regular-400 : font-family: "Raleway-regular-400";
+    --medium-500 : font-family: "Raleway-medium-500";
+    --semibold-600: font-family: "Raleway-semibold-600";
+    --bold-700 : font-family: "Raleway-bold-700";
+    --extra-bold-800 : font-family: "Raleway-bold-800";
+    --black-900: font-family: "Raleway-black-900";
 }
 
 * {
@@ -151,7 +133,7 @@ body {
 header.topbar {
     background-color: var(--dark);
     color: var(--pure);
-    font-family: 'Raleway-SemiBold';
+    font-family: var(--semibold-600);
     padding: 0.7rem 0;
 }
 header.topbar .auth a {
@@ -177,11 +159,11 @@ nav .top {
     padding: 1.5rem 0;
 }
 nav .top .contact h5, nav .top .time h5 {
-    font-family: 'Raleway-Black';
+    font-family: var(--black-900);
     margin-bottom: 0.25rem;
 }
 nav .top .contact h6, nav .top .time h6 {
-    font-family: 'Raleway-Medium';
+    font-family: var(--medium-500);
     letter-spacing: 0.055rem;
     font-size: 0.75rem;
     color: var(--ternary);
@@ -194,7 +176,7 @@ nav .top .contact img, nav .top .time img {
 .navbar a {
     color: var(--dark);
     text-decoration: none;
-    font-family: 'Raleway-SemiBold';
+    font-family: var(--semibold-600);
     font-size: 1rem;
     padding: 1rem 1.5rem;
 }
@@ -219,16 +201,16 @@ nav .top .contact img, nav .top .time img {
     position: relative;
 }
 .hero h1 {
-    font-family: "Raleway-Extrabold";
+    font-family: var(--extra-bold-800);
     font-size: 2.5rem;
     margin-bottom: 0.8rem;
 }
 .hero h1 span {
-    font-family: "Raleway-bold";
+    font-family: var(--bold-700);
     color: var(--primary);
 }
 .hero p {
-    font-family: 'Raleway-Medium';
+    font-family: var(--medium-500);
     width: 50%;
     margin-bottom: 0.5rem;
     line-height: 1.4rem;
@@ -304,14 +286,14 @@ hr{
 .top-products .food-card .pricing {
     color: var(--danger); 
     padding: 0.5rem 0;
-    font-family: 'Raleway-Bold';
+    font-family: var(--bold-700);
 }
 .top-products .food-card button {
     display: flex;
     margin: 0.8rem 0;
     align-items: center;
     color: var(--dark);
-    font-family: 'raleway-bold';
+    font-family: var(--bold-700);
     font-weight: 400;
     font-size: 1rem;
     background-color: var(--pure);
@@ -444,7 +426,7 @@ hr{
 .big-deal .card-wrapper .card div:first-child {
     font-size: 3rem;
     margin-bottom: 0.2rem;
-    font-family: 'Raleway-ExtraBold';
+    font-family: var(--extra-bold-800);
 }
 
 
@@ -527,7 +509,7 @@ hr{
     border: 2px solid var(--primary);
     background-color: var(--primary);
     color: var(--pure);
-    font-family: 'Raleway-Bold';
+    font-family: var(--bold-700);
 }
 .subscribe .input-wrap button:hover {
     border: 2px solid var(--primary);
@@ -658,12 +640,12 @@ footer .copyright a {
         margin: 2rem 0;
     }
     .nav-top .contact h5, .nav-top .time h5 {
-        font-family: 'Raleway-Black';
+        font-family: var(--black-900);
         margin-bottom: 0.25rem;
         font-size: 0.8rem;
     }
     .nav-top .contact h6, .nav-top .time h6 {
-        font-family: 'Raleway-Medium';
+        font-family: var(--medium-500);
         letter-spacing: 0.1rem;
         font-size: 0.7rem;
         color: var(--ternary);
